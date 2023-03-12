@@ -1,0 +1,5 @@
+publié, prix ht, prix ttc, adresse, region, type, piece, service, client, date creation, date modification, supprimer
+
+ALTER TABLE `annonce` CHANGE `region_ID` `region_ID` INT(11) NULL;
+SELECT annonce.ID, `Prix`, `Publication`, `Adresse`, annonce.DateCreation, annonce.DateModification, `client_ID`, client.Nom, `typeimmobilier_ID`, `region_ID` FROM `annonce` inner join client on client.ID=annonce.client_ID;
+LEFT pour Region
